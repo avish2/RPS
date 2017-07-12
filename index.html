@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Rasa" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div id="score" class="col-md-3">
+				<div id="player1score"><span id="player1"></span>'s Score: <span id="player1wins"></span></div>
+				<div id="player2score"><span id="player2"></span>'s Score: <span id="player2wins"></span></div>
+			</div>
+			<div id="title" class="col-md-6">
+				<h1> Rock &#8226 Paper &#8226 Scissors </h1>
+				<p id="tagline">A way to hang with your friends long after curfew!</p>
+			</div>
+			<div class="col-md-3">
+				<p id="players"></p>
+				<a id="chat-button">Open Chat</a>
+			</div>
+		</div>
+		<div class="row" id="options"></div>
+		<div id="chat-screen" class="row"></div>
+	</div>
+<script src="scripts/scripts.js" ></script>
+</body>
+</html>
