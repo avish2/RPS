@@ -95,6 +95,10 @@ function game() {
   players.on("value", function(snapshot){
     var sv = snapshot.val();
     var keys = Object.keys(sv);
+    var Player1 = sv[keys[0]];
+    var Player2 = sv[keys[1]];
+    console.log(Player1);
+    console.log(Player2);
     $("#player1").html(sv[keys[0]].name + "'S SCORE: ");
     $("#player2").html(sv[keys[1]].name + "'S SCORE: ");
     $("#player1wins").html(sv[keys[0]].wins);
@@ -103,6 +107,30 @@ function game() {
   var options = ["images/rock.png", "images/paper.png","images/scissors.png"];
   var playing = true;
     for (i=0; i<options.length; i++) {
-      var choice = $("#options").append("<img class='button' id='choice" + [i] + "' src='" + options[i] + "'></img>");
+      var choice = $("#options").append("<img class='button' id='choice" + [i] + "' data-attr='" + [i] + "' src='" + options[i] + "'></img>");
     }
+}
+$(document).on("click", ".button", function() {
+    var i = $(this).attr("data-attr");
+    $("#options").empty();   
+    database.ref("/players").on("value", function(snapshot) {
+      var sv = snapshot.val();
+      console.log(sv);
+      var keys = Object.keys(sv);
+      var Player1 = sv[keys[0]];
+      var Player2 = sv[keys[1]];
+      var Player1id = keys[0];
+      var Player2id = keys[1];
+      console.log("choice?");
+      console.log(sv.Player1id);
+      console.log(keys);
+      console.log(playersRef.Player1id.choice);
+      // Player1.update({choice: i});
+  });
+    // Player1.update({choice: i});
+    // setChoice(i);
+  });
+
+function setChoice() {
+
 }
