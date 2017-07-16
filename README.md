@@ -1,1 +1,1 @@
-# RPS
+A classic game made with jQuery and Firebase.

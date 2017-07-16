@@ -13,8 +13,8 @@
 	<div class="container">
 		<div class="row">
 			<div id="score" class="col-md-3">
-				<div id="player1score"><span id="player1"></span>'s Score: <span id="player1wins"></span></div>
-				<div id="player2score"><span id="player2"></span>'s Score: <span id="player2wins"></span></div>
+				<div id="player1score"><span id="player1"></span><span id="player1wins"></span></div>
+				<div id="player2score"><span id="player2"></span><span id="player2wins"></span></div>
 			</div>
 			<div id="title" class="col-md-6">
 				<h1> Rock &#8226 Paper &#8226 Scissors </h1>
@@ -26,7 +26,34 @@
 			</div>
 		</div>
 		<div class="row" id="options"></div>
-		<div id="chat-screen" class="row"></div>
+		<br>
+<!-- 		<div id="chat-screen" class="row"></div> -->
+		<div class="row" id="chatform">
+		<form id="chat">
+			  <div class="row">
+			    <div class="col-lg-12">
+			      <div id='messagesDiv' class="msg-wrapper"></div>
+			      <hr />
+			     </div>
+			  </div>
+			  
+<!-- 			  <div class="row">
+			    <div class="col-lg-12">
+			      <label>Name
+			        <input type="text" id='nameInput' placeholder='Name' />
+			      </label>
+			    </div>
+			  </div> -->
+			  <div class="row">
+			    <div class="col-lg-12">
+<!-- 			      <label>Message -->
+			        <textarea class='form-control' id='messageInput' placeholder='Type Message Here'></textarea>
+<!-- 			      </label> -->
+			    </div>
+			  </div>
+
+			</form>
+			</div>
 	</div>
 <script src="scripts/scripts.js" ></script>
 </body>

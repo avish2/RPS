@@ -33,6 +33,7 @@ p {
 }
 #options {
 	margin-top: 50px;
+  clear: both;
 }
 #chat-button {
 	margin-top: 0px;
@@ -49,14 +50,16 @@ p {
 	height: 190px;
 	width: 300px;
 }
-a{
+a,
+.dotbutton {
 	text-decoration: none;
 	color: white;
     border: white;
     border-style: dashed;
     border-width: 2px;
 }
-#chat-button {
+#chat-button,
+.dotbutton {
   $line-height: 3.2;
   $border-width: 0.3;
   $text-size: 1.8;
@@ -71,7 +74,8 @@ a{
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
 }
- a:after {
+ a:after,
+ .dotbutton:after {
       $arrow-hypot: ($line-height*$text-size) + (2*$border-width);
       $arrow-edge: sqrt(($arrow-hypot*$arrow-hypot)*0.5);
       box-sizing: border-box;      
@@ -92,13 +96,17 @@ a{
       margin-top: $border-width * -1rem;
     } 
 
-  a:hover {
+  a:hover,
+  .dotbutton:hover {
     transition: all .3s;
     color: #ffff6b;
 	text-decoration: none;
 	border-color: #ffff6b;
 	cursor: pointer;
   }
+#submit {
+  margin-top: 20px;
+}
 #score {
 	  $line-height: 3.2;
   $border-width: 0.3;
@@ -145,4 +153,54 @@ box-shadow:         0px 0px 30px 0px rgba(255, 255, 107, 0.42);
 box-shadow:         0px 0px 30px 0px rgba(232, 0, 0, 0.67);
 }
 */
+.form-group {
+  margin: auto;
+  width: 30%;
+}
+#chat {
+  margin: 10px auto;
+  border: 1px solid #ccc;
+}
+.msg-wrapper{
+  max-height: 250px;
+  overflow: auto;
+}
+.msg-wrapper em{
+  font-size: 15px;
+  padding-right: 20px;
+  font-weight: bold;
+}
+.msg-wrapper div{
+  font-size: 16px
+}
+label {
+      color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: normal;
+    width: 90%;
+}
+textarea {
+  width: 90%;
+}
+#messageInput {
+  margin-bottom: 15px;
+  margin-left: 40px;
+  width: 94%;
+  text-align: center;
 
+}
+#chatform {
+      bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    clear: both;
+}
+#player-name {
+  text-align: center;
+}
+#please {
+  font-size: 30px;
+}
